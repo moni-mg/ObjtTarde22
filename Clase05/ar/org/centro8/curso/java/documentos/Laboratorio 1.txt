@@ -1,0 +1,4 @@
+Dado el UML Calculadora y el prototipo de clase Calculadora.java
+- Elaborar documentación de los métodos. (Java Doc)
+- Crear Objetos simulados de la clase y evaluar calculos
+- Programar el contenido de los métodos de calculadora.
