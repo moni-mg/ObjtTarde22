@@ -5,7 +5,6 @@ package ar.org.centro8.curso.java.utils;
  */
 
 public class Calculadora {
-
     /***
      * Suma los dos números que ingresan como parametro
      * 
@@ -14,9 +13,10 @@ public class Calculadora {
      * @return resultado de la suma
      */
     public double sumar(double nro1, double nro2) {
+        //TODO sumar los parametros
         return nro1 + nro2;
     }
-
+    
     /***
      * Resta los dos números que ingresan como parametro
      * 
@@ -25,9 +25,10 @@ public class Calculadora {
      * @return resultado de la resta
      */
     public double restar(double nro1, double nro2) {
+        //TODO restar los parametros
         return nro1 - nro2;
     }
-
+    
     /***
      * Multiplica los dos números que ingresan como parametro
      * 
@@ -36,9 +37,10 @@ public class Calculadora {
      * @return producto de la multiplicación
      */
     public double multiplicar(double nro1, double nro2) {
+        //TODO multiplicar los parametros
         return nro1 * nro2;
     }
-
+    
     /***
      * Divide los dos números que ingresan como parametro
      * 
@@ -47,6 +49,7 @@ public class Calculadora {
      * @return resultado de la división
      */
     public double dividir(double nro1, double nro2) {
+        //TODO dividir los parametros, contemplar la div/0
         return nro1 / nro2;
     }
 
