@@ -10,23 +10,39 @@ public class Prueba {
     public static void main(String[] args) {
         // inicializo clases
         Radio radio = new Radio("generica");
-        Vehiculo vehic = new Vehiculo("rojo", "Fiat", "1100", 111000.56, radio);
-        AutoNuevo auto1 = new AutoNuevo("azul", "Fiat", "1100", radio);
-        AutoClasico auto2 = new AutoClasico("verde", "Fiat", "1100");
-        // Inicio
-        System.out.println("Instancia inicial: ");
-        mostrarEstado(vehic, auto1, auto2);
 
+        Vehiculo vehic = new Vehiculo("rojo", "Fiat", "1100", radio);
+        AutoNuevo nuevo = new AutoNuevo("azul", "Fiat", "1100", radio);
+        AutoClasico clasico = new AutoClasico("verde", "Fiat", "1100");
         // pruebo metodos
-        vehic.cambiarRadio("prueba");
-        mostrarEstado(vehic, auto1, auto2);
+        System.out.println("Estado inicial de los autos:");
+        mostrarEstado(vehic, nuevo, clasico);
 
+        System.out.println("\nAgrego radio en auto clásico");
+        clasico.nuevaRadio("Radio Nueva");
+        System.out.println("Auto clásico: " + clasico.toString());
+
+        System.out.println("\nCambio radio en auto clásico:");
+        clasico.cambiarRadio("Radio Nueva");
+        System.out.println("Auto clásico: " + clasico.toString());
+
+        System.out.println("\nAgrego precio en auto clásico:");
+        clasico.setPrecio(120000);
+        System.out.println("Auto clásico: " + clasico.toString());
+
+        System.out.println("\nCambio precio a -10 en auto clásico:");
+        clasico.setPrecio(-10);
+        System.out.println("Auto clásico: " + clasico.toString());
+
+        System.out.println("\nCambio radio en auto nuevo:");
+        nuevo.cambiarRadio("Radio Mejor B)");
+        System.out.println("Auto moderno: " + nuevo.toString());
     }
 
-    private static void mostrarEstado(Vehiculo vehic, AutoNuevo auto1, AutoClasico auto2) {
-        System.out.println("Estado de los autos:\n");
+    private static void mostrarEstado(Vehiculo vehic, AutoNuevo nuevo, AutoClasico clasico) {
+        System.out.println("\nEstado de los autos:");
         System.out.println("Vehiculo generico: " + vehic.toString());
-        System.out.println("Auto moderno: " + auto1.toString());
-        System.out.println("Auto clásico: " + auto2.toString());
+        System.out.println("Auto moderno: " + nuevo.toString());
+        System.out.println("Auto clásico: " + clasico.toString());
     }
 }

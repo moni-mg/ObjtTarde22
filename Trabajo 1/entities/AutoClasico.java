@@ -10,9 +10,17 @@ public class AutoClasico extends Vehiculo {
         super(color, marca, modelo);
     }
 
-    // metodos
-    public void nuevaRadio(Radio radioN) {
-        setRadio(radioN);
+    public AutoClasico(String color, String marca, String modelo, Radio radio) {
+        super(color, marca, modelo, radio);
     }
 
+    public AutoClasico(String color, String marca, String modelo, double precio, Radio radio) {
+        super(color, marca, modelo, precio, radio);
+    }
+
+    // metodos
+    public void nuevaRadio(String radioNueva) {
+        Radio radio = new Radio(radioNueva);
+        this.setRadio(radio);
+    }
 }

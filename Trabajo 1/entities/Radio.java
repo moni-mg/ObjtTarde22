@@ -17,22 +17,19 @@ public class Radio {
         return marca;
     }
 
-    public void setMarca(String marca) {
-        this.marca = marca;
+    public void setMarca(String rad) {
+        this.marca = rad;
     }
 
-    // metodos
-    public void cambiarMarca(String radio) {
-        marca = radio;
+    // metodo
+    public void cambiarMarca(String string) {
+        setMarca(string);
     }
 
     // toString
     @Override
     public String toString() {
-        return "marca=" + marca;
-    }
-
-    public void cambiarRadio(String string) {
+        return "marca= " + marca;
     }
 
 }

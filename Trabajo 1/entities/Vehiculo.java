@@ -70,7 +70,7 @@ public class Vehiculo {
         if (precio > 0) {
             this.precio = precio;
         } else {
-            System.out.println("Precio no válido");
+            System.out.println("**********\nPrecio inválido\n**********");
         }
 
     }
@@ -79,13 +79,14 @@ public class Vehiculo {
         return radio;
     }
 
-    public void setRadio(Radio string) {
-        this.radio = string;
+    public void setRadio(Radio rad) {
+        this.radio = rad;
     }
 
     // metodos
-    public void cambiarRadio(String string) {
-        this.radio.cambiarMarca(string);
+
+    public void cambiarRadio(String cambioRadio) {
+        this.radio.cambiarMarca(cambioRadio);
     }
 
     // toString
