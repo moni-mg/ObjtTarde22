@@ -8,13 +8,10 @@ import entities.Vehiculo;
 public class Prueba {
 
     public static void main(String[] args) {
-        // inicializo clases
-        Radio radio = new Radio("generica");
-
-        Vehiculo vehic = new Vehiculo("rojo", "Fiat", "1100", radio);
-        AutoNuevo nuevo = new AutoNuevo("azul", "Fiat", "1100", radio);
+        Vehiculo vehic = new Vehiculo("rojo", "Fiat", "1100", "Sony");
+        AutoNuevo nuevo = new AutoNuevo("azul", "Fiat", "1100", "Phillips");
         AutoClasico clasico = new AutoClasico("verde", "Fiat", "1100");
-        // pruebo metodos
+        
         System.out.println("Estado inicial de los autos:");
         mostrarEstado(vehic, nuevo, clasico);
 
@@ -37,6 +34,10 @@ public class Prueba {
         System.out.println("\nCambio radio en auto nuevo:");
         nuevo.cambiarRadio("Radio Mejor B)");
         System.out.println("Auto moderno: " + nuevo.toString());
+        
+        System.out.println("Estado final de los autos:");
+        mostrarEstado(vehic, nuevo, clasico);
+        
     }
 
     private static void mostrarEstado(Vehiculo vehic, AutoNuevo nuevo, AutoClasico clasico) {
