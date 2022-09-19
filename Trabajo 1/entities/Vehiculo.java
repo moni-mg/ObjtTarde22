@@ -6,7 +6,7 @@ public class Vehiculo {
     private String marca;
     private String modelo;
     private double precio;
-    protected Radio radio;
+    private Radio radio;
 
     // Constructores
     public Vehiculo(String color, String marca, String modelo) {
@@ -22,19 +22,19 @@ public class Vehiculo {
         this.precio = precio;
     }
 
-    public Vehiculo(String color, String marca, String modelo, Radio radio) {
+    public Vehiculo(String color, String marca, String modelo, String marcaRadio) {
         this.color = color;
         this.marca = marca;
         this.modelo = modelo;
-        this.radio = radio;
+        this.radio = new Radio(marcaRadio);
     }
 
-    public Vehiculo(String color, String marca, String modelo, double precio, Radio radio) {
+    public Vehiculo(String color, String marca, String modelo, double precio, String marcaRadio) {
         this.color = color;
         this.marca = marca;
         this.modelo = modelo;
         this.precio = precio;
-        this.radio = radio;
+        this.radio = new Radio(marcaRadio);
     }
 
     // GEters y Setters
