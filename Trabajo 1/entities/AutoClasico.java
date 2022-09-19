@@ -20,7 +20,6 @@ public class AutoClasico extends Vehiculo {
 
     // metodos
     public void nuevaRadio(String radioNueva) {
-        Radio radio = new Radio(radioNueva);
-        this.setRadio(radio);
+        this.setRadio(new Radio(radioNueva));   
     }
 }
